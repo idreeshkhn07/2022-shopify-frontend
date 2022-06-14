@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Sarala&family=Sen:wght@700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+    overflow-x: hidden;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background: linear-gradient(-45deg, #000014, #1F2075, #230937, #632793);
+	background-size: 1000% 400%;
+	animation: gradient 30s ease infinite;
+	height: 100vh;
+}
+
+h1 {
+    font-family: 'Sen', sans-serif;
+    font-size: 1.65rem;
+    color: #d3d3d3;
+}
+
+h2 {
+    font-family: 'Sarala', sans-serif;
+    font-size: 1.125rem;
+    color: #000000;
+}
+
+p {
+    font-family: 'Sarala', sans-serif;
+    font-size: 1rem;
+}
+
+#hero {
+    animation: float 10s linear infinite;
+}
+
+.button {
+    font-family: 'Sen', sans-serif;
+    font-size: 1.5rem;
+    color: #FFFFFF;
+}
+
+.likeButton {
+    font-family: 'Sarala', sans-serif;
+    font-size: 1rem;
+    color: #FFFFFF;
+}
+
+.loader {
+    border-top-color: #E3414A;
+    -webkit-animation: spinner 1.5s linear infinite;
+    animation: spinner 1.5s linear infinite;
+}
+
+button:hover {
+    background-color: 742F58;
+    animation: float 5s linear infinite, shadow 5s linear infinite;
+}
+
+@-webkit-keyframes spinner {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spinner {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+@keyframes float {
+	0% {
+		transform: translatey(0px);
+	}
+	50% {
+		transform: translatey(-10px);
+	}
+	100% {
+		transform: translatey(0px);
+	}
+}
+
+@keyframes shadow {
+    0% {
+		box-shadow: 0 5px 10px 0px #C4B9C7;
+	}
+	50% {
+		box-shadow: 0 15px 10px 0px #C4B9C7;
+	}
+	100% {
+		box-shadow: 0 5px 10px 0px #C4B9C7;
+	}
+}
+
+@media only screen and (max-width: 640px) {
+    h1 {
+        font-size: 1.3rem;
+    }
+  }
